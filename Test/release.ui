@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>546</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>500</width>
+    <height>546</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>500</width>
+    <height>546</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>90</y>
+     <width>311</width>
+     <height>361</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <property name="verticalSpacing">
+     <number>25</number>
+    </property>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="Line_price">
+      <property name="clearButtonEnabled">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>描    述:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_5">
+      <property name="text">
+       <string>价    格:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="Line_name">
+      <property name="clearButtonEnabled">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLineEdit" name="Line_describe">
+      <property name="clearButtonEnabled">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_6">
+      <property name="text">
+       <string>物品名称:</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="releasebtn">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>330</y>
+     <width>151</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton:disabled{
+	background-color:rgb(85, 255, 255);
+}
+QPushButton{
+	background-color:rgb(255, 170, 127);
+	color:rgb(201,0,94);
+	border-radius:10px;
+}
+
+QPushButton:hover{
+	background-color:rgb(165, 165, 165);
+}</string>
+   </property>
+   <property name="text">
+    <string>发布</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>510</y>
+     <width>491</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="text">
+       <string>商品</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="text">
+       <string>发布</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_4">
+      <property name="text">
+       <string>我的</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>showIndex()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>115</x>
+     <y>518</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>135</x>
+     <y>444</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>showMy()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>418</x>
+     <y>527</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>445</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>releasebtn</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>releaseObject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>416</x>
+     <y>369</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>448</x>
+     <y>368</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Line_name</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>Form</receiver>
+   <slot>enable_releasebtn()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>306</x>
+     <y>163</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>359</x>
+     <y>167</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Line_price</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>Form</receiver>
+   <slot>enable_releasebtn()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>280</x>
+     <y>266</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>374</x>
+     <y>247</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Line_describe</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>Form</receiver>
+   <slot>enable_releasebtn()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>273</x>
+     <y>381</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>350</x>
+     <y>369</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>showIndex()</slot>
+  <slot>showMy()</slot>
+  <slot>releaseObject()</slot>
+  <slot>enable_releasebtn()</slot>
+ </slots>
+</ui>

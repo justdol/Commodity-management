@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>widget</class>
+ <widget class="QWidget" name="widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>546</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>500</width>
+    <height>546</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>500</width>
+    <height>546</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLineEdit" name="lineEdit">
+       <property name="placeholderText">
+        <string>输入宝贝序号进行购买</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_5">
+       <property name="text">
+        <string>购买</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="tableWidget"/>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>商品</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="release_btn">
+       <property name="text">
+        <string>发布</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="my_btn">
+       <property name="text">
+        <string>我的</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>release_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>widget</receiver>
+   <slot>show_release()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>243</x>
+     <y>506</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>220</x>
+     <y>449</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>my_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>widget</receiver>
+   <slot>show_my()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>432</x>
+     <y>506</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>420</x>
+     <y>449</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_5</sender>
+   <signal>clicked()</signal>
+   <receiver>widget</receiver>
+   <slot>search_object()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>462</x>
+     <y>25</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>493</x>
+     <y>45</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>show_release()</slot>
+  <slot>show_my()</slot>
+  <slot>search_object()</slot>
+ </slots>
+</ui>
